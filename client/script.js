@@ -31,6 +31,10 @@ function typeText(element, text) {
   }, 20);
 }
 
+// generate unique ID for each message div of bot
+// necessary for typing text effect for that specific reply
+// without unique ID, typing text will work on every element
+
 function generateId() {
   const timestamp = Date.now();
   const randomNum = Math.random();
@@ -75,7 +79,7 @@ const handleSubmit = async (e) => {
 
   //fetch data from the ChatGPT server
 
-  const response = await fetch('https://askmeanything-zxhj.onrender.com', {
+  const response = await fetch('https://askmeanything-zxhj.onrender.com/', {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
