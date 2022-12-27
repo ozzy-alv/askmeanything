@@ -6,7 +6,7 @@ import { Configuration, OpenAIApi } from 'openai';
 dotenv.config();
 
 const configuration = new Configuration({
-  apiKey: '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',
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
 const openai = new OpenAIApi(configuration);
@@ -44,4 +44,6 @@ app.post('/', async (req, res) => {
   }
 });
 
-app.listen(5000, () => console.log('server started on http://localhost:5000'));
+app.listen(5000, () =>
+  console.log('AI server started on http://localhost:5000'),
+);
