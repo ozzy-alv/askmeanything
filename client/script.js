@@ -79,7 +79,7 @@ const handleSubmit = async (e) => {
 
   //fetch data from the ChatGPT server
 
-  const response = await fetch('https://askmeanything-zxhj.onrender.com/', {
+  const response = await fetch('https://askmeanything-zxhj.onrender.com', {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
