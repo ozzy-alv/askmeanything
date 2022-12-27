@@ -10,7 +10,6 @@ const configuration = new Configuration({
 });
 
 const openai = new OpenAIApi(configuration);
-const port = process.env.PORT || 5000;
 
 const app = express();
 app.use(cors());
@@ -43,4 +42,4 @@ app.get('/', (req, res) => {
     }
   });
 
-app.listen(port, () => console.log(`listening on... http://localhost:${port}`));
+app.listen(port, () => console.log(`listening on... http://localhost:5000`));
